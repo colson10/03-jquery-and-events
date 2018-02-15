@@ -98,13 +98,11 @@ articleView.setTeasers = function() {
 
   $('.read-on').on('click', function(event) {
     event.preventDefault();
-    console.log($(this).parent().find('section.article-body'));
-
-    $(this).parent().find('section.article-body').fadeIn(750);
-    console.log('hello');
+    $(this).parent().find('section.article-body *').fadeIn(750);
+    $(this).parent().find('.read-on').hide();
   }
   );
-  // TODO: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
+  // DONE: Add an event handler to reveal all the hidden elements, when the .read-on link is clicked. You can go ahead and hide the "Read On" link once it has been clicked. Be sure to prevent the default link-click action!
   // Ideally, we'd attach this as just one event handler on the #articles section, and let it process (in other words... delegate) any .read-on clicks that happen within child nodes.
 };
 
